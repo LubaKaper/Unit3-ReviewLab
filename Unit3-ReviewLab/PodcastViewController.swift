@@ -45,6 +45,14 @@ class PodcastViewController: UIViewController {
             }
         })
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailPodcastVC = segue.destination as? DetailPodcastViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("error")
+        }
+        let podcastInfo = podcasts[indexPath.row]
+        detailPodcastVC.podcastInfo = podcastInfo
+    }
 
 }
 

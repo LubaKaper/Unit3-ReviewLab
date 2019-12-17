@@ -18,4 +18,5 @@ struct Podcast: Decodable {
     let artworkUrl600: String
     let genres: [String]
     let collectionName: String
+    let trackId: Int 
 }
