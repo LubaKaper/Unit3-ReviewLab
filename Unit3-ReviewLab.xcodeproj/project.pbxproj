@@ -11,6 +11,7 @@
 		8D6CBD9523A97CE0005FE37F /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CBD9423A97CE0005FE37F /* UIViewController+Alerts.swift */; };
 		8D6CBD9723A98592005FE37F /* FavoritePodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CBD9623A98592005FE37F /* FavoritePodcastsViewController.swift */; };
 		8D6CBD9923A987C5005FE37F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CBD9823A987C5005FE37F /* FavoritesTableViewCell.swift */; };
+		8D6CBDA123AA8E26005FE37F /* Unit3_ReviewLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CBDA023AA8E26005FE37F /* Unit3_ReviewLabTests.swift */; };
 		8D78524B23A9308600F52749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78524A23A9308600F52749 /* AppDelegate.swift */; };
 		8D78524D23A9308600F52749 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78524C23A9308600F52749 /* SceneDelegate.swift */; };
 		8D78524F23A9308600F52749 /* PodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78524E23A9308600F52749 /* PodcastViewController.swift */; };
@@ -26,11 +27,24 @@
 		8D78526C23A958BF00F52749 /* DetailPodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78526B23A958BF00F52749 /* DetailPodcastViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8D6CBDA323AA8E26005FE37F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D78523F23A9308600F52749 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D78524623A9308600F52749;
+			remoteInfo = "Unit3-ReviewLab";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8D6CBD9223A96EE4005FE37F /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		8D6CBD9423A97CE0005FE37F /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		8D6CBD9623A98592005FE37F /* FavoritePodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePodcastsViewController.swift; sourceTree = "<group>"; };
 		8D6CBD9823A987C5005FE37F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		8D6CBD9E23AA8E26005FE37F /* Unit3-ReviewLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit3-ReviewLabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6CBDA023AA8E26005FE37F /* Unit3_ReviewLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3_ReviewLabTests.swift; sourceTree = "<group>"; };
+		8D6CBDA223AA8E26005FE37F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D78524723A9308600F52749 /* Unit3-ReviewLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit3-ReviewLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D78524A23A9308600F52749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D78524C23A9308600F52749 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D6CBD9B23AA8E26005FE37F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D78524423A9308600F52749 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,11 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D6CBD9F23AA8E26005FE37F /* Unit3-ReviewLabTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CBDA023AA8E26005FE37F /* Unit3_ReviewLabTests.swift */,
+				8D6CBDA223AA8E26005FE37F /* Info.plist */,
+			);
+			path = "Unit3-ReviewLabTests";
+			sourceTree = "<group>";
+		};
 		8D78523E23A9308600F52749 = {
 			isa = PBXGroup;
 			children = (
 				8D78525E23A930BC00F52749 /* SupportingFiles */,
 				8D78524923A9308600F52749 /* Unit3-ReviewLab */,
+				8D6CBD9F23AA8E26005FE37F /* Unit3-ReviewLabTests */,
 				8D78524823A9308600F52749 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8D78524723A9308600F52749 /* Unit3-ReviewLab.app */,
+				8D6CBD9E23AA8E26005FE37F /* Unit3-ReviewLabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +143,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D6CBD9D23AA8E26005FE37F /* Unit3-ReviewLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D6CBDA523AA8E26005FE37F /* Build configuration list for PBXNativeTarget "Unit3-ReviewLabTests" */;
+			buildPhases = (
+				8D6CBD9A23AA8E26005FE37F /* Sources */,
+				8D6CBD9B23AA8E26005FE37F /* Frameworks */,
+				8D6CBD9C23AA8E26005FE37F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D6CBDA423AA8E26005FE37F /* PBXTargetDependency */,
+			);
+			name = "Unit3-ReviewLabTests";
+			productName = "Unit3-ReviewLabTests";
+			productReference = 8D6CBD9E23AA8E26005FE37F /* Unit3-ReviewLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8D78524623A9308600F52749 /* Unit3-ReviewLab */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D78525B23A9308700F52749 /* Build configuration list for PBXNativeTarget "Unit3-ReviewLab" */;
@@ -138,6 +188,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Luba Kaper";
 				TargetAttributes = {
+					8D6CBD9D23AA8E26005FE37F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8D78524623A9308600F52749;
+					};
 					8D78524623A9308600F52749 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -157,11 +211,19 @@
 			projectRoot = "";
 			targets = (
 				8D78524623A9308600F52749 /* Unit3-ReviewLab */,
+				8D6CBD9D23AA8E26005FE37F /* Unit3-ReviewLabTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D6CBD9C23AA8E26005FE37F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D78524523A9308600F52749 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +237,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D6CBD9A23AA8E26005FE37F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D6CBDA123AA8E26005FE37F /* Unit3_ReviewLabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D78524323A9308600F52749 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +268,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8D6CBDA423AA8E26005FE37F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D78524623A9308600F52749 /* Unit3-ReviewLab */;
+			targetProxy = 8D6CBDA323AA8E26005FE37F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8D78525023A9308600F52749 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -218,6 +296,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8D6CBDA623AA8E26005FE37F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNV924Q9C2;
+				INFOPLIST_FILE = "Unit3-ReviewLabTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lubakaper.Unit3-ReviewLabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unit3-ReviewLab.app/Unit3-ReviewLab";
+			};
+			name = Debug;
+		};
+		8D6CBDA723AA8E26005FE37F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNV924Q9C2;
+				INFOPLIST_FILE = "Unit3-ReviewLabTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lubakaper.Unit3-ReviewLabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unit3-ReviewLab.app/Unit3-ReviewLab";
+			};
+			name = Release;
+		};
 		8D78525923A9308700F52749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -371,6 +489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D6CBDA523AA8E26005FE37F /* Build configuration list for PBXNativeTarget "Unit3-ReviewLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D6CBDA623AA8E26005FE37F /* Debug */,
+				8D6CBDA723AA8E26005FE37F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8D78524223A9308600F52749 /* Build configuration list for PBXProject "Unit3-ReviewLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
