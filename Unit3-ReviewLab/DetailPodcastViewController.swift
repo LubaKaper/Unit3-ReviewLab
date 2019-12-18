@@ -35,9 +35,9 @@ class DetailPodcastViewController: UIViewController {
         }
         podcastName.text = podcast.collectionName
         artistNameLabel.text = podcast.artistName
-        genreLabel.text = podcast.genres.first
+        genreLabel.text = podcast.genres?.first
         
-        podcastImage.getImage(with: podcast.artworkUrl100) { [weak self] (result) in
+        podcastImage.getImage(with: podcast.artworkUrl100 ?? "") { [weak self] (result) in
             switch result {
             case .failure:
                 DispatchQueue.main.async {
@@ -60,7 +60,7 @@ class DetailPodcastViewController: UIViewController {
             fatalError("error")
         }
         
-        let podcastPost = Favorite(trackId: podcast.trackId, favoritedBy: "Luba", collectionName: podcast.collectionName, artworkUrl600: podcast.artworkUrl600)
+        let podcastPost = Podcast(artistName: podcast.artistName, trackName: podcast.trackName, artworkUrl100: podcast.artworkUrl100, artworkUrl600: podcast.artworkUrl600, genres: podcast.genres, collectionName: podcast.collectionName, trackId: podcast.trackId, favoritedBy: "Luba") //(trackId: podcast.trackId, favoritedBy: "Luba", collectionName: podcast.collectionName, artworkUrl600: podcast.artworkUrl600)
         
         PodcastAPIClient.postPodcast(podcast: podcastPost) { [weak self, weak sender] (result) in
           DispatchQueue.main.async {

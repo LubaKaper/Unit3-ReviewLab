@@ -16,7 +16,7 @@ class FavoritePodcastsViewController: UIViewController {
     private var refreshControl: UIRefreshControl!
     
     
-    var favoritePodcasts = [Favorite]() {
+    var favoritePodcasts = [Podcast]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -24,7 +24,7 @@ class FavoritePodcastsViewController: UIViewController {
         }
         
     }
-    var favePodcast: Favorite?
+    var favePodcast: Podcast?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,15 @@ class FavoritePodcastsViewController: UIViewController {
         tableView.dataSource = self 
         tableView.delegate = self
         configureRefreshControl()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailPodcastVC = segue.destination as? DetailPodcastViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("error")
+        }
+        let podcastInfo = favoritePodcasts[indexPath.row]
+        detailPodcastVC.podcastInfo = podcastInfo
     }
     
     func configureRefreshControl() {
@@ -43,14 +52,18 @@ class FavoritePodcastsViewController: UIViewController {
     }
     @objc
     func fetchFave() {
-        PodcastAPIClient.fetchFavoritePodcast { (result) in
+        PodcastAPIClient.fetchFavoritePodcast {[weak self] (result) in
+            
+            DispatchQueue.main.async {
+              self?.refreshControl.endRefreshing()
+            }
             switch result {
             case .failure(let appError):
             DispatchQueue.main.async {
-              self.showAlert(title: "Failed fetching favorite", message: "\(appError)")
+              self?.showAlert(title: "Failed fetching favorite", message: "\(appError)")
             }
             case .success(let favorites):
-                self.favoritePodcasts = favorites.filter {$0.favoritedBy == "Luba" }
+                self?.favoritePodcasts = favorites.filter {$0.favoritedBy == "Luba" }
             }
         }
     }

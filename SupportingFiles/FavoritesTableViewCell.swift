@@ -19,7 +19,7 @@ class FavoritesTableViewCell: UITableViewCell {
     @IBOutlet weak var favoriteByLabel: UILabel!
     
     
-    func configureCell(for favorite: Favorite) {
+    func configureCell(for favorite: Podcast) {
         
         nameLabel.text = favorite.collectionName
         favoriteByLabel.text = favorite.favoritedBy
